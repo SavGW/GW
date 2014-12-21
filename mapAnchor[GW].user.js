@@ -12,7 +12,7 @@
 //
 // @include         http://www.ganjawars.ru/map.php*
 //
-// @version         1.2
+// @version         1.3
 // @updateURL	    https://raw.github.com/SavGW/GW/master/mapAnchor[GW].user.js
 // @grant	        none
 // ==/UserScript==
