@@ -10,11 +10,11 @@
 // @license         GPLv3 - http://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright       Copyright (C) 2012, by SavGW <softmaker2010@gmail.com>
 //
-// @include         http://www.ganjawars.ru/map.php?*
+// @include         http://www.ganjawars.ru/map.php*
 //
-// @version         1.0
+// @version         1.1
 // @updateURL	    https://raw.github.com/SavGW/GW/master/mapAnchor[GW].user.js
-// @grant	    none
+// @grant	        none
 // ==/UserScript==
 
 (function() {	
