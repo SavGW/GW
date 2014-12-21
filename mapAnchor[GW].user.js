@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            mapAnchor [GW]
 // @description     Добавляет значки якорей в портовых секторах
-// @icon            https://raw.github.com/SavGW/GW/master/32_gw.png
+// @icon            https://cloud.githubusercontent.com/assets/10257481/5518112/07dffdba-8969-11e4-988b-d20f96f7313c.png
 //
 // @author	        (Савик) <softmaker2010@gmail.com>
 // @namespace       http://github.com/SavGW/GW.git
@@ -12,7 +12,7 @@
 //
 // @include         http://www.ganjawars.ru/map.php*
 //
-// @version         1.1
+// @version         1.2
 // @updateURL	    https://raw.github.com/SavGW/GW/master/mapAnchor[GW].user.js
 // @grant	        none
 // ==/UserScript==
