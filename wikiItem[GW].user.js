@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name            wikiItem [GW]
 // @description     Добавляет кнопку с ссылкой на предмет в GanjaWiki
-// @icon            https://raw.github.com/SavGW/GW/master/32_gw.png
+// @icon            https://cloud.githubusercontent.com/assets/10257481/5518112/07dffdba-8969-11e4-988b-d20f96f7313c.png
 //
-// @author	        (Савик) <softmaker2010@gmail.com>
+// @author	    (Савик) <softmaker2010@gmail.com>
 // @namespace       http://github.com/SavGW
 // @downloadURL	    https://raw.github.com/SavGW/GW/master/wikiItem[GW].user.js
 //
@@ -12,7 +12,7 @@
 //
 // @include         http://www.ganjawars.ru/item.php?*
 //
-// @version         1.2
+// @version         1.3
 // @updateURL	    https://raw.github.com/SavGW/GW/master/wikiItem[GW].user.js
 // @grant	    none
 // ==/UserScript==
