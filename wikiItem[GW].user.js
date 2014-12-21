@@ -3,7 +3,7 @@
 // @description     Добавляет кнопку с ссылкой на предмет в GanjaWiki
 // @icon            https://raw.github.com/SavGW/GW/master/32_gw.png
 //
-// @author	    (Савик) <softmaker2010@gmail.com>
+// @author	        (Савик) <softmaker2010@gmail.com>
 // @namespace       http://github.com/SavGW
 // @downloadURL	    https://raw.github.com/SavGW/GW/master/wikiItem[GW].user.js
 //
@@ -20,7 +20,7 @@
 (function() {	
 	if (/\/item.php/.test(document.location.href)){
 		var item_name;
-		if (/upg=/.test(document.location.href)) {item_name = />&gt;&nbsp;(.*) \[.*<\/font>/.exec(document.body.innerHTML)[1];}
+		if ((/upg=/.test(document.location.href))||(/m=/.test(document.location.href))) {item_name = />&gt;&nbsp;(.*) \[.*<\/font>/.exec(document.body.innerHTML)[1];}
 		else {item_name = />&gt;&nbsp;(.*)<\/font>/.exec(document.body.innerHTML)[1];}
 		var fonts = document.body.getElementsByTagName('font');
 		for (i in fonts) {
@@ -28,9 +28,8 @@
 				if (fonts[i].innerHTML.indexOf(item_name) != -1) {
 					var btn = document.createElement('img');
 					btn.setAttribute('src','http://www.ganjawiki.ru/skins/monobook/external.png');
-					btn.setAttribute('style','cursor:pointer;border:1px solid darkgreen;border-radius:5px;float:right;overflow:hidden;margin:-3px 15px 0 0;');
+                    btn.setAttribute('style','cursor:pointer;margin-left:5px;');
 					btn.setAttribute('title','Найти на GanjaWiki.ru');
-					btn.innerHTML = 'GanjaWiki';
 					fonts[i].appendChild(btn);
 					btn.addEventListener('click', function(){window.open('http://www.ganjawiki.ru/index.php/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Search?search='+item_name);}, false);
 				}
