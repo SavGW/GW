@@ -12,7 +12,7 @@
 //
 // @include         http://www.ganjawars.ru/item.php?*
 //
-// @version         1.1
+// @version         1.2
 // @updateURL	    https://raw.github.com/SavGW/GW/master/wikiItem[GW].user.js
 // @grant	    none
 // ==/UserScript==
