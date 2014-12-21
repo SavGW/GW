@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name            wikiItem [GW]
-// @description     Добавляет кнопку с ссылкой на предмет в GanjaWiki
+// @name            mapAnchor [GW]
+// @description     Добавляет значки якорей в портовых секторах
 // @icon            https://raw.github.com/SavGW/GW/master/32_gw.png
 //
 // @author	        (Савик) <softmaker2010@gmail.com>
@@ -12,7 +12,7 @@
 //
 // @include         http://www.ganjawars.ru/map.php?*
 //
-// @version         1.2
+// @version         1.0
 // @updateURL	    https://raw.github.com/SavGW/GW/master/mapAnchor[GW].user.js
 // @grant	    none
 // ==/UserScript==
@@ -54,23 +54,23 @@
 			}
 		}
 	}
-function getOffsetRect(elem) {
-	var box = elem.getBoundingClientRect();
-	var map = elem.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getBoundingClientRect();
-	var body = document.body;
-	var docElem = document.documentElement;
-	var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
-	var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
-	var clientTop = docElem.clientTop || body.clientTop || 0;
-	var clientLeft = docElem.clientLeft || body.clientLeft || 0;
-	var top  = box.top - map.top +  scrollTop - clientTop -28;
-	var left = box.left - map.left + scrollLeft - clientLeft +9;
-	return { top: Math.round(top), left: Math.round(left) };
-}    
-function crAnchor(pos) {
-	var anc = document.createElement('img');
-	anc.setAttribute('src',chrome.extension.getURL('anchor.png'));
-	anc.setAttribute('style','cursor:pointer;overflow:hidden;top:'+pos.top+'px;left:'+pos.left+'px;position:absolute;display:table-row;');
-	return anc;
-}
+	function getOffsetRect(elem) {
+		var box = elem.getBoundingClientRect();
+		var map = elem.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getBoundingClientRect();
+		var body = document.body;
+		var docElem = document.documentElement;
+		var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
+		var clientTop = docElem.clientTop || body.clientTop || 0;
+		var clientLeft = docElem.clientLeft || body.clientLeft || 0;
+		var top  = box.top - map.top +  scrollTop - clientTop -28;
+		var left = box.left - map.left + scrollLeft - clientLeft +9;
+		return { top: Math.round(top), left: Math.round(left) };
+	}    
+	function crAnchor(pos) {
+		var anc = document.createElement('img');
+		anc.setAttribute('src','https://cloud.githubusercontent.com/assets/10257481/5518076/ca8c5c20-8967-11e4-89a2-a321dd96fa94.png');
+		anc.setAttribute('style','cursor:pointer;overflow:hidden;top:'+pos.top+'px;left:'+pos.left+'px;position:absolute;display:table-row;');
+		return anc;
+	}
 })();
