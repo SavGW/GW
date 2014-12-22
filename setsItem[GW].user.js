@@ -12,7 +12,7 @@
 //
 // @include         http://www.ganjawars.ru/item.php?*
 //
-// @version         1.1
+// @version         1.2
 // @updateURL	    https://raw.github.com/SavGW/GW/master/setsItem[GW].user.js
 // @grant	    none
 // ==/UserScript==
@@ -26,7 +26,7 @@
         var item_name;
 		if ((/upg=/.test(document.location.href))||(/m=/.test(document.location.href))) {item_name = />&gt;&nbsp;(.*?) \[.*</i.exec(document.body.innerHTML)[1];}
         else {item_name = />&gt;&nbsp;(.*?)</i.exec(document.body.innerHTML)[1];}
-        var re = new RegExp(item_name, 'i')
+        var re = new RegExp(item_name+'[^ ]', 'i')
         var tsets = '';
         for (var i in sets) {if (re.test(sets[i])) tsets += '<tr class=txt>' + sets[i] + '</tr>';}
         if (tsets.length > 0) {
